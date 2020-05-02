@@ -78,16 +78,16 @@ $(document).ready(() => {
     y: -500
   });
 
-  $('#skills-button').click(e => {
-    console.log("Hey");
-    TweenMax.from('.tech', {
-      delay: 1,
-      opacity: 0,
-      stagger: {
-        amount: 5,
-      }
-    })
-  });
+  // $('#skills-button').click(e => {
+  //   console.log("Hey");
+  //   TweenMax.from('.tech', {
+  //     delay: 1,
+  //     opacity: 0,
+  //     stagger: {
+  //       amount: 5,
+  //     }
+  //   })
+  // });
 
   // Typed
   const Typed = require('typed.js');
