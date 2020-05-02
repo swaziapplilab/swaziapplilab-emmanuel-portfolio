@@ -41,9 +41,13 @@ $(document).ready(() => {
 
 
 
+
+
+
+
   // GSAP Timeline animation
 
-  const { TimelineMax } = require('gsap');
+  const { TimelineMax, TweenMax } = require('gsap');
   const timeline = new TimelineMax();
 
   timeline.from('.nav-brand', {
@@ -53,14 +57,21 @@ $(document).ready(() => {
   });
 
   timeline.from('.nav-item', {
-    // duration: 1,
     translateY: -300,
     stagger: { amount: .5, from: 'end' }
   });
 
+  let offset = 10;
+
   timeline.from('.blob-1', {
     duration: .5,
-    x: -500
+    x: -500,
+    onComplete: function () {
+      setInterval(() => {
+        offset *= - 1;
+        TweenMax.to('.blob-1', 2, { y: offset, animationIterationCount: 'infinite' });
+      }, 2000);
+    }
   });
 
   timeline.from('.blob-2', {
@@ -68,6 +79,16 @@ $(document).ready(() => {
     y: -500
   });
 
+  $('#skills-button').click(e => {
+    console.log("Hey");
+    TweenMax.from('.tech', {
+      delay: 1,
+      opacity: 0,
+      stagger: {
+        amount: 5,
+      }
+    })
+  });
 
   // Typed
   const Typed = require('typed.js');
