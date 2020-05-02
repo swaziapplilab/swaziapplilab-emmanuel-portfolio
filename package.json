@@ -1,0 +1,21 @@
+{
+  "name": "emmanuelnduwa.github.io",
+  "version": "1.0.0",
+  "main": "index.html",
+  "license": "MIT",
+  "scripts": {
+    "sass-compile": "sass --watch scss:css --style compressed",
+    "sass-watch": "sass --watch scss:css --style compressed",
+    "js-watch": "watchify js/index.js -o js/index.browsified.js",
+    "deploy": "git add . && git commit -am \"changes committed to the repository\" && git push origin master"
+  },
+  "dependencies": {
+    "gsap": "^3.2.6",
+    "typed.js": "^2.0.11"
+  },
+  "author": {
+    "name": "Glory Katende",
+    "url": "https://katendeglory.github.io",
+    "email": "katendeglory@gmail.com"
+  }
+}

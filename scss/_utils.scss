@@ -1,0 +1,29 @@
+.container {
+  max-width: $max-width;
+  padding: 0 25px;
+  margin: auto;
+}
+
+.link {
+  position: relative;
+
+  &:visited {
+    color: $color-white;
+    text-decoration: none;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 5px;
+    width: 0;
+    height: 2px;
+    background-color: rgba($color: $color-primary, $alpha: 0.75);
+    transition: 0.5s;
+  }
+
+  &:hover::before {
+    width: 90%;
+  }
+}
