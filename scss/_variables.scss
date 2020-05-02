@@ -1,5 +1,9 @@
 $color-bg: #1f1f1f;
 $color-primary: #bf360c;
+$color-secondary: rgba(
+  $color: $color-primary,
+  $alpha: 0.8,
+);
 $color-white: #eee;
 
 $gradient-primary: linear-gradient(135deg, #9f44d3 10%, #e2b0ff 100%);

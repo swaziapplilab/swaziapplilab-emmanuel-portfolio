@@ -278,14 +278,12 @@ header {
 
   .achievement-grid {
     .achievement {
-      // box-shadow: inset 5px 5px 10px #1a1a1a, inset -5px -5px 10px #242424;
-      border-left: 5px solid rgba($color: $color-primary, $alpha: 0.8);
-      // border-radius: 5px;
+      border-left: 5px solid $color-secondary;
       padding: 1rem;
       margin-bottom: 2rem;
 
       .achievement-title {
-        color: rgba($color: $color-primary, $alpha: 0.8);
+        color: $color-secondary;
         margin-bottom: -0.75rem;
 
         &::before {
