@@ -7,7 +7,7 @@
     "sass-compile": "sass --watch scss:css --style compressed",
     "sass-watch": "sass --watch scss:css --style compressed",
     "js-watch": "watchify js/index.js -o js/index.browsified.js",
-    "deploy": "git add . && git commit -am \"changes committed to the repository\" && git push origin master"
+    "deploy": "git add . && git commit -am \"changes committed to the repository\" && git push"
   },
   "dependencies": {
     "gsap": "^3.2.6",
