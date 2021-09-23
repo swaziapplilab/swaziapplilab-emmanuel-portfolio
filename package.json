@@ -4,10 +4,10 @@
   "main": "index.html",
   "license": "MIT",
   "scripts": {
-    "sass-compile": "sass --watch scss:css --style compressed",
-    "sass-watch": "sass --watch scss:css --style compressed",
-    "js-watch": "watchify js/index.js -o js/index.browsified.js",
-    "deploy": "git add . && git commit -am \"changes committed to the repository\" && git push"
+    "sass:compile": "sass --watch scss:css --style compressed",
+    "sass:watch": "sass --watch scss:css --style compressed",
+    "js:watch": "watchify js/index.js -o js/index.browsified.js",
+    "git:push": "git add . && git commit -am \"Yet another commit\" && git push"
   },
   "dependencies": {
     "gsap": "^3.2.6",

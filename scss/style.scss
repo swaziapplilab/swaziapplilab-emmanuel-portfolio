@@ -11,7 +11,7 @@ header {
   top: 0;
   left: 0;
   z-index: 99;
-  border-top: 2.5px solid $color-primary;
+  border-top: 1px dashed $color-primary;
   transition: 0.5s;
   overflow: hidden;
 
@@ -52,12 +52,15 @@ header {
       font-size: 90%;
       color: darken($color: $color-white, $amount: 5);
       .nav-item {
-        margin-left: 0.75rem;
-        margin-right: 0.75rem;
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
         &:last-child {
           background: $color-primary;
-          box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
+          box-shadow: 1px 1px 2px #1a1a1a, -1px -1px 2px #242424;
           transition: 0.25s;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          border-radius: 5px !important;
           &:hover {
             background: darken($color: $color-primary, $amount: 10);
           }
@@ -150,12 +153,12 @@ header {
   &::after {
     content: "";
     @include mobile {
-      width: 50%;
+      width: 100%;
     }
-    width: 25%;
-    height: 5px;
+    width: 100%;
+    height: 0.5px;
     margin-top: 2.5rem;
-    background-color: $color-primary;
+    border-bottom: 1px dashed rgba($color: $color-primary, $alpha: 0.3);
     position: absolute;
   }
 
@@ -169,6 +172,7 @@ header {
   }
 
   .sub-title {
+    text-transform: uppercase;
     opacity: 0.85;
     font-size: calc(2.5vw + 1rem);
     font-weight: bolder;
@@ -191,7 +195,7 @@ header {
 
     img {
       width: 100%;
-      border: 2.5px dashed $color-primary;
+      border: 1px dashed $color-primary;
     }
   }
 }
@@ -201,10 +205,11 @@ header {
     display: flex;
     align-items: center;
     margin: 1rem auto;
+    text-transform: uppercase;
     i {
       margin-right: 10px;
       color: rgba($color: $color-primary, $alpha: 0.8);
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
     a {
       display: inline-block;
@@ -216,7 +221,7 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
     row-gap: 25px;
-    margin-top: 2.5rem;
+    margin-top: 4rem;
     @include mobile {
       grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
     }
@@ -248,11 +253,48 @@ header {
   }
 }
 
+.section-work {
+  .work-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    @include mobile {
+      display: block;
+    }
+
+    .work {
+      box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid rgba($color: $color-secondary, $alpha: 0.2);
+      border-radius: 5px !important;
+
+      .work-content {
+        text-transform: uppercase;
+      }
+
+      .work-year {
+        color: rgba($color: $color-primary, $alpha: 0.8);
+        margin-bottom: -0.75rem;
+        font-size: 1rem;
+
+        &::before {
+          font-family: "Font Awesome 5 Free";
+          content: "\f1ad";
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
 .section-education {
   .education-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    margin-bottom: 5rem;
 
     @include mobile {
       display: block;
@@ -260,8 +302,10 @@ header {
 
     .education {
       box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
-      padding: 1rem;
-      margin-bottom: 2rem;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid rgba($color: $color-secondary, $alpha: 0.2);
+      border-radius: 5px !important;
 
       .education-year {
         color: rgba($color: $color-primary, $alpha: 0.8);
@@ -278,17 +322,20 @@ header {
 
   .achievement-grid {
     .achievement {
-      border-left: 5px solid $color-secondary;
-      padding: 1rem;
-      margin-bottom: 2rem;
+      border-bottom: 1px solid rgba($color: $color-secondary, $alpha: 0.4);
+      border-radius: 5px !important;
+      padding: 0.75rem;
+      margin-bottom: 1.5rem;
+      background-color: #1c1c1c;
 
       .achievement-title {
+        text-transform: uppercase;
         color: $color-secondary;
-        margin-bottom: -0.75rem;
+        margin-bottom: -1rem;
 
         &::before {
           font-family: "Font Awesome 5 Free";
-          content: "\f005";
+          content: "\f559";
           margin-right: 5px;
         }
       }
