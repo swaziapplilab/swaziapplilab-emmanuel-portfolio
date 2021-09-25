@@ -4,8 +4,8 @@
   "main": "index.html",
   "license": "MIT",
   "scripts": {
-    "sass:compile": "sass --watch scss:css --style compressed",
-    "sass:watch": "sass --watch scss:css --style compressed",
+    "sass:compile": "npx sass --watch scss:css --style compressed",
+    "sass:watch": "npx sass --watch scss:css --style compressed",
     "js:watch": "watchify js/index.js -o js/index.browsified.js",
     "git:push": "git add . && git commit -am \"Yet another commit\" && git push"
   },
