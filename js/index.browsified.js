@@ -105,7 +105,7 @@ $(document).ready(() => {
 
   setTimeout(() => {
     var typed2 = new Typed('.typed-skilled-2', {
-      strings: ["Mobile Developer", "Web Developer", "Google Cloud Specialist", "IT Technical Support"],
+      strings: ["Mobile Developer", "Web Developer", "GCloud Specialist", "IT Tech Support"],
       typeSpeed: 30,
       loop: true,
       loopCount: Infinity,
